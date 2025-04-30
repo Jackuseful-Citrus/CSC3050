@@ -1,0 +1,13 @@
+Yes, f2 is true
+a[5] = 1 2 3 4 5 
+a[5] = 1 12 123 1234 12345 
+Program exit from an exit() system call
+------------ STATISTICS -----------
+Number of Instructions: 1042
+Number of Cycles: 2058
+Avg Cycles per Instrcution: 1.9750
+Branch Perdiction Accuacy: 0.1548 (Strategy: Always Not Taken)
+Number of Control Hazards: 141
+Number of Data Hazards: 988
+Number of Memory Hazards: 0
+-----------------------------------

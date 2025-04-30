@@ -1,0 +1,89 @@
+#######################################################
+# CSC3050 Practice Bomb Lab
+# Directions to Students
+#######################################################
+
+****************
+# 1. Overview
+****************
+
+The nefarious Dr. Lethal is planning to spread his binary bombs everywhere
+on our machines! A binary bomb is a program that consists of a sequence of 
+phases. Each phase expects you to type a particular string on stdin. If you 
+type the correct string, the phase would be defused! And if you defuse all
+the phases, Dr. Lethal's atrocious scheme would be shattered! However, if 
+you enter even just one incorrect string, the bomb would go off!!!
+
+But there's also good news! The CSC3050 TA team decides to prepare you for 
+this dire task. In this practice bomb lab, we will provide you with 2 (two) 
+simple but sufficient phases to let you get the hang of it! Of course, this
+practice lab would NOT be graded, and you can do whatever you want with the
+bomb without receiving any penalties :p
+
+You can also completely ignore this practice lab if you are confident enough
+that you can stand up to Dr. Lethal on your own... But keep in mind, DO NOT
+come to the TA team wailing like a crybaby if you find yourself stuck deep in
+Dr. Lethal's quagmire! A man shall bear his own consequences!
+
+
+****************
+# 2. Files
+****************
+
+This practice lab consists of the following file structure:
+
+bomblab_prep/
+  |-
+  |---bomb                  // the executable file to defuse
+  |---bomb.asm              // full RISC-V disassembly of bomb
+  |---bomb.c                // main function of the bomb in c
+  |-
+  |---README
+  |-
+  |---src/                  // The rest of the source code in c
+       |-
+       |---phases.c         // c code of phase_1 and phase_2
+       |---phases.h         // header of phases.c
+       |-
+       |---solution.txt     // the solution of the practice lab
+       |-
+       |---support.c        // useful functions invoked
+       |---support.h        // header of support.c
+
+
+# !!! WARNING !!!: 
+It is STRONGLY advised NOT to look up the source code and the solution in
+src.tar before fully trying out the bomb!!! Once the logic of the program is
+clear to you, debugging the assembly will be like cheating. You have to train
+yourself to debug without any source code, otherwise this lab is meaningless.
+      (Auctually I zipped the directory up just for this purpose)
+Note that everything in src.tar will not be given to you in the real bomblab.
+All you'll be seeing would be bomb, bomb.c, and README. You can generate the
+bomb.asm disassembly file yourself using objdump in your RISC-V environment.
+
+
+****************
+# 3. Environment
+****************
+
+Both this practice bomb and the real bomb will be run in the provided QEMU
+environment in the form of a Docker container (credits to USTF Vincent Janssen). 
+To set it up, simply pull the container image from ghcr.io/janssen-v/rvemu 
+and follow the instructions on the Github repository: 
+https://github.com/janssen-v/rvemu
+
+To move the files into the environment, you can use SCP to do so. An example 
+command to do so is shown below:
+
+scp bomb.tar -p 2222 student@localhost:~
+
+To untar the bomb, use the command below:
+
+tar -xvf bomb.tar
+
+To debug and defuse the bomb, a GNU Debugger (gdb) is strongly recommended
+and ready to use in your environment. It is strongly recommended to look up gdb 
+manuals online before this tool is officially taught to you in our tutorials.
+To start debugging, type the following command and enjoy your trip!
+
+gdb ./bomb

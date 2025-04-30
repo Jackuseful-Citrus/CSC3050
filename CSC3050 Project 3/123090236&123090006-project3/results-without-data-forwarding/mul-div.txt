@@ -1,0 +1,10 @@
+Program exit from an exit() system call
+------------ STATISTICS -----------
+Number of Instructions: 755
+Number of Cycles: 1578
+Avg Cycles per Instrcution: 2.0901
+Branch Perdiction Accuacy: 0.2308 (Strategy: Always Not Taken)
+Number of Control Hazards: 99
+Number of Data Hazards: 773
+Number of Memory Hazards: 0
+-----------------------------------

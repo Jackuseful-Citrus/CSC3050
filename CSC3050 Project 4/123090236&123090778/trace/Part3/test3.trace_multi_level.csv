@@ -1,0 +1,4 @@
+Level,NumReads,NumWrites,NumHits,NumMisses,MissRate,TotalCycles
+L1,77376,25792,102784,384,0.372208,465152
+L2,384,0,0,384,100,7680
+L3,384,0,0,384,100,38400
